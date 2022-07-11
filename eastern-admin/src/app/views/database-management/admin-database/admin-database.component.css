@@ -1,0 +1,35 @@
+.player {
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    -webkit-transition: all 600ms;
+    transition: all 600ms;
+    z-index: 20;
+}
+
+    .player div {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        text-align: center;
+        backface-visibility: hidden;
+    }
+
+  .back {
+        color: green;
+        -webkit-transform: rotateY(180deg);
+        transform: rotateY(180deg);
+    }
+
+.player.voted {
+    transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg);
+}
+
+.example-form-field {
+  width: 200px;
+}
+table {
+  width: 100%;
+}
+
+/* tr:nth-child(even){background-color: #f2f2f2} */

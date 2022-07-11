@@ -1,0 +1,171 @@
+<div fxLayout="row wrap" fxLayoutAlign="center" fxLayoutGap="1%">
+
+	<div fxFlex="50">
+		<ngx-flip [flip]="tableflip">
+			<div front>
+				<mat-card>
+					<mat-card-header>
+						<mat-card-title> Tables Front</mat-card-title>
+						<span style="flex: 1 1 auto"></span>
+						<button mat-flat-button (click)="tableflip = !tableflip">
+							<mat-icon>add</mat-icon>
+						</button>
+					</mat-card-header>
+					<mat-divider style="border-top-width: 3px"></mat-divider>
+					<mat-card-content>
+						<mat-list *ngFor="let table of tables">
+							<mat-list-item>
+								<span [innerHTML]="table.name"></span>
+								<span style="flex: 1 1 auto"></span>
+								<button mat-flat-button>
+									<mat-icon>edit</mat-icon>
+								</button>
+							</mat-list-item>
+							<mat-divider></mat-divider>
+						</mat-list>
+					</mat-card-content>
+				</mat-card>
+			</div>
+			<div back>
+				<mat-card>
+					<mat-card-header>
+						<mat-card-title> Create Tables</mat-card-title>
+						<span style="flex: 1 1 auto"></span>
+						<button mat-flat-button (click)="saveData()">
+							<mat-icon> save </mat-icon>
+						</button>
+					</mat-card-header>
+					<mat-divider style="border-top-width: 3px"></mat-divider>
+					<mat-card-content>
+						<mat-list>
+							<mat-list-item style="text-align:center">
+								<mat-form-field>
+									<mat-label>table name</mat-label>
+									<input matInput type="input" [(ngModel)]="tableName">
+								</mat-form-field>
+							</mat-list-item>
+							<mat-divider></mat-divider>
+							<mat-list-item>
+								<span> add column</span>
+								<span style="flex: 1 1 auto"></span>
+								<button mat-flat-button (click)="addColumn()">
+									<mat-icon> add </mat-icon>
+								</button>
+							</mat-list-item>
+								<table style="width: 100%">
+									<tr style="background-color: gray;height: 30px;">
+										<th>
+											Name
+										</th>
+										<th>
+											Mandatory
+										</th>
+										<th>
+											Type
+										</th>
+										<th>
+											Length
+										</th>
+									</tr>
+									<tr *ngFor="let item of columns;let i=index">
+										<td>
+											<mat-form-field class="example-form-field">
+												<input matInput type="input" [(ngModel)]="item.columnName">
+											</mat-form-field>
+										</td>
+										<td>
+											<mat-form-field class="example-form-field">
+												<mat-select [(ngModel)]="item.mandatory">
+													<mat-option *ngFor="let select of tableMadat" [value]="select">
+														{{select}}
+													</mat-option>
+												</mat-select>
+											</mat-form-field>
+										</td>
+										<td>
+											<mat-form-field class="example-form-field">
+												<mat-select [(ngModel)]="item.columnType">
+													<mat-option *ngFor="let select of tableTypes" [value]="select">
+														{{select}}
+													</mat-option>
+												</mat-select>
+											</mat-form-field>
+										</td>
+										<td>
+											<mat-form-field class="example-form-field">
+												<mat-select [(ngModel)]="item.length">
+													<mat-option *ngFor="let select of tableLength" [value]="select">
+														{{select}}
+													</mat-option>
+												</mat-select>
+											</mat-form-field>
+										</td>
+										<td>
+											<!-- <span style="flex: 1 1 auto"></span> -->
+											<button mat-flat-button (click)="remvoeColumn(i)">
+												<mat-icon> remove </mat-icon>
+											</button>
+											<mat-divider></mat-divider>
+										</td>
+									</tr>
+								</table>
+						</mat-list>
+					</mat-card-content>
+				</mat-card>
+			</div>
+		</ngx-flip>
+	</div>
+	<div fxFlex="30">
+		<ngx-flip [flip]="dbFlip">
+			<div front>
+				<mat-card>
+					<mat-card-header>
+						<mat-card-title> Databases Front</mat-card-title>
+						<span style="flex: 1 1 auto"></span>
+						<button mat-flat-button (click)="dbFlip = !dbFlip">
+							<mat-icon>add</mat-icon>
+						</button>
+					</mat-card-header>
+					<mat-divider style="border-top-width: 3px"></mat-divider>
+					<mat-card-content>
+						<mat-list *ngFor="let database of databases">
+							<mat-list-item>
+								<span [innerHTML]="database.name"></span>
+								<span style="flex: 1 1 auto"></span>
+								<button mat-flat-button>
+									<mat-icon>edit</mat-icon>
+								</button>
+							</mat-list-item>
+							<mat-divider></mat-divider>
+						</mat-list>
+					</mat-card-content>
+				</mat-card>
+			</div>
+			<div back>
+				<mat-card>
+					<mat-card-header>
+						<mat-card-title> Databases Back</mat-card-title>
+						<span style="flex: 1 1 auto"></span>
+						<button mat-flat-button (click)="dbFlip = !dbFlip">
+							<mat-icon>add</mat-icon>
+						</button>
+					</mat-card-header>
+					<mat-divider style="border-top-width: 3px"></mat-divider>
+					<mat-card-content>
+						<mat-list *ngFor="let database of databases">
+							<mat-list-item>
+								<span [innerHTML]="database.name"></span>
+								<span style="flex: 1 1 auto"></span>
+								<button mat-flat-button>
+									<mat-icon>edit</mat-icon>
+								</button>
+							</mat-list-item>
+							<mat-divider></mat-divider>
+						</mat-list>
+					</mat-card-content>
+				</mat-card>
+			</div>
+		</ngx-flip>
+	</div>
+
+</div>

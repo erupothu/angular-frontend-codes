@@ -1,0 +1,10 @@
+<p>admin-contact-us works!</p>
+
+<!-- data="<p>Hello, world!</p>" -->
+<ckeditor #editor [editor]="Editor" [(ngModel)]="mycontent" [config]="config" (change)="onChange($event)" ></ckeditor>
+
+<button (click)="toggleDisabled()">
+    {{ isDisabled ? 'Enable editor' : 'Disable editor' }}
+</button>
+
+<div [innerHTML]="mycontent | sanitizehtml"></div>
