@@ -1,0 +1,14 @@
+<mat-toolbar class="dashboard-toolbar">
+	<mat-toolbar-row>
+		<button mat-button (click)="drawer.toggle()"> <mat-icon>menu</mat-icon> </button>
+		<span>welcome to Mat ToolBar</span>
+	</mat-toolbar-row>
+</mat-toolbar>
+
+<mat-drawer-container  class="dashboard-container" autosize>
+	<mat-drawer #drawer class="dashboard-side-navigation" mode="side">
+		<div (click)="drawer.toggle()" [routerLink]="['/dashboard/dashboard-welcome']" routerLinkActive="router-link-active" > Testing </div>
+	</mat-drawer>
+	<mat-drawer-container>dash board works!</mat-drawer-container>
+	<router-outlet (click)="drawer.toggle()"></router-outlet>
+</mat-drawer-container>

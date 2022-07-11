@@ -1,0 +1,19 @@
+.welcome-toolbar {
+	background-color: coral;
+}
+
+.welcome-toolbar a {
+	color: black
+}
+.welcome-spacer {
+	flex: 1 1 auto;
+}
+
+.welcome-main {
+	background: url("../../assets/family-pic.jpg");
+	background-repeat:  no-repeat;
+	background-attachment: fixed;
+	background-size:  cover;
+	background-color: #999;
+	height: 100%;
+}
