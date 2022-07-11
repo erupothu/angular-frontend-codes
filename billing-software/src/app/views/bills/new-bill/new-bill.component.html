@@ -1,0 +1,64 @@
+<div fxLayout="row wrap" fxLayoutAlign="center" fxLayoutGap="2">
+    <div fxFlex="50">
+
+        <mat-card>
+            <div id="print-section">
+                <div class="bill-header">
+                    <div style="text-align: center;">
+                        <mat-card-title> VR Mart</mat-card-title>
+                        <mat-card-subtitle>#317, Badvel, Kadapa, AP - 524302</mat-card-subtitle>
+                        <mat-card-subtitle>Email: harish.erupothu@gmail.com</mat-card-subtitle>
+                        <mat-card-subtitle>+91 8464044323</mat-card-subtitle>
+                    </div>
+                    <div>
+                    <span style="padding-left: 10px;">Date: {{ CurrentDate | date: 'dd-MM-yyyy' }}</span> <span style="float: right;padding-right: 10px;">Customer: Vinny </span>
+                    </div>
+                    <br>
+                    <div>
+                        <span style="padding-left: 15px;">Time: {{ CurrentDate | date: 'hh:mm:ss' }} </span> <span style="float: right;padding-right: 15px;">Cashier: Harish </span>
+                    </div>
+                </div>
+                <hr style="border: 1px solid black;">
+                <table class="bill-table">
+                    <tr>
+                        <th>Item</th>
+                        <th>Quantity</th>
+                        <th>Mrp</th>
+                        <th>Price</th>
+                        <th>Final Price</th>
+                    </tr>
+                    <tr *ngFor="let item of selectedItems">
+                        <td>{{item.name}}</td>
+                        <td>{{item.quantity}}</td>
+                        <td><del>{{item.mrp}}</del></td>
+                        <td>{{item.price}}</td>
+                        <td>{{item.finalPrice}}</td>
+                    </tr>
+                </table>
+
+                <hr style="border: 1px solid black;">
+                <div style="float: right;">
+                    Total : {{total}}
+                </div>
+
+                <div style="text-align: center;">
+                    You Saved: {{yousaved}}
+                </div>
+
+            </div>
+
+            <mat-card-footer style="text-align: center;padding: 20px;">
+                <button mat-raised-button (click)="printPage()">print</button>
+                <button mat-raised-button useExistingCss="true" printSectionId="print-section" ngxPrint>print2</button>
+            </mat-card-footer>
+        </mat-card>
+
+    </div>
+
+</div>
+
+<div class="add-button">
+    <button mat-fab (click)="addItem()">
+        <mat-icon>add</mat-icon>
+    </button>
+</div>

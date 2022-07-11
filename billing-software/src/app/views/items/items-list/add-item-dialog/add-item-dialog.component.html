@@ -1,0 +1,19 @@
+<div class="add-item">
+    <div>
+        <h2>Add Item to List</h2>
+    </div>
+    <div>
+        <input matInput placeholder="Item name" [(ngModel)]="data.name">
+        <br>
+        <input matInput placeholder="price" [(ngModel)]="data.mrp">
+        <br>
+        <input matInput placeholder="discount" [(ngModel)]="data.discount">
+        <br>
+        <input matInput placeholder="barcode" [(ngModel)]="data.barcode">
+        <br>
+        <input matInput placeholder="stock available" [(ngModel)]="data.stock">
+    </div>
+    <div>
+        <button mat-raised-button color="primary" (click)="SaveItem(data)">Save</button>
+    </div>
+</div>

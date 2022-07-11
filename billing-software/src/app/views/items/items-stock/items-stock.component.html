@@ -1,0 +1,18 @@
+<div fxLayout="row wrap" fxLayoutAlign="center">
+    <div fxFlex="80">
+        <mat-card class="list-item">
+        <table>
+            <tr>
+                <th> Item Name </th>
+                <th> Initial Stock </th>
+                <th> Available Stock </th>
+            </tr>
+            <tr *ngFor="let item of allItems">
+                <td> {{item.name}} </td>
+                <td> {{item.stock}} </td>
+                <td> {{item.availableStock}} </td>
+            </tr>
+        </table>
+        </mat-card>
+    </div>
+</div>

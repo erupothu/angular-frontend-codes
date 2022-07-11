@@ -1,0 +1,17 @@
+.add-button {
+  position: fixed;
+  right: 2vw;
+  bottom: 2vw;
+}
+
+.bill-table {
+  padding: 20px;
+  width: 100%;
+  text-align: center;
+}
+
+.bill-header {
+  /* text-align: center; */
+  background-color: violet;
+  color: white;
+}

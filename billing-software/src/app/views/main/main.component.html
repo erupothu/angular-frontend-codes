@@ -1,0 +1,41 @@
+<div fxLayout="row wrap" fxLayoutAlign="center">
+    <div fxFlex="100">
+        <mat-toolbar color="primary" class="example-toolbar">
+            <button mat-icon-button (click)="snav.toggle()">
+                <mat-icon>menu</mat-icon>
+            </button>
+            <h1 class="example-app-name">Responsive App</h1>
+        </mat-toolbar>
+
+        <mat-sidenav-container class="example-sidenav-container">
+            <mat-sidenav #snav mode="side" fixedTopGap="56" opened>
+                <mat-nav-list>
+                    <h2>Bills</h2>
+                    <a mat-list-item routerLink="/view/bills/new-bill"> <mat-icon>add</mat-icon> New Bill </a>
+                    <a mat-list-item routerLink="/view/bills/manage-bills"> <mat-icon>edit</mat-icon> Manage Bill </a>
+                    <a mat-list-item routerLink="/view/bills/view-sales"> <mat-icon>note</mat-icon> View Sales </a>
+                    <a mat-list-item routerLink="/view/bills/view-saved-bills"> <mat-icon>files</mat-icon> View Saved Bills </a>
+                    <mat-divider></mat-divider>
+                    <h2>Items</h2>
+                    <a mat-list-item routerLink="/view/items/items-list"> <mat-icon>add</mat-icon> Item List </a>
+                    <a mat-list-item routerLink="/view/items/items-stock"> <mat-icon>edit</mat-icon> View Stock </a>
+                    <mat-divider></mat-divider>
+                    <h2>Customers</h2>
+                    <a mat-list-item routerLink="."> <mat-icon>note</mat-icon> Customer List </a>
+                    <a mat-list-item routerLink="."> <mat-icon>file</mat-icon> View Sales by Customer </a>
+                    <a mat-list-item routerLink="."> <mat-icon>file</mat-icon> Offer / Contack Customer </a>
+                    <mat-divider></mat-divider>
+                    <h2>About</h2>
+                    <a mat-list-item routerLink="."> <mat-icon>note</mat-icon> Settings </a>
+                    <a mat-list-item routerLink="."> <mat-icon>file</mat-icon> Feedback </a>
+                    <a mat-list-item routerLink="."> <mat-icon>file</mat-icon> Help </a>
+
+                </mat-nav-list>
+            </mat-sidenav>
+
+            <mat-sidenav-content>
+                <router-outlet></router-outlet>
+            </mat-sidenav-content>
+        </mat-sidenav-container>
+    </div>
+</div>

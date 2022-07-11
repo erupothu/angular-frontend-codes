@@ -1,0 +1,36 @@
+<div fxLayout="row wrap" fxLayoutAlign="center">
+    <div fxFlex="80">
+        <mat-card class="list-item">
+            <h1> Items List </h1>
+            <div >
+                <table>
+                    <tr>
+                        <th>Cart</th>
+                        <th>Item Name</th>
+                        <th>MRP</th>
+                        <th></th>
+                    </tr>
+                    <tr *ngFor="let item of allItems">
+                        <td>
+                            <mat-icon>shopping_cart</mat-icon>
+                        </td>
+                        <td>
+                            <mat-card-title>{{item.name}}</mat-card-title>
+                            <mat-card-subtitle> Availabel Stock: {{item.stock}}</mat-card-subtitle>
+                        </td>
+                        <td style="color: green;">{{item.mrp}}</td>
+                        <td>
+                            <button mat-flat-button (click)="addItems(item)"> <mat-icon>edit</mat-icon> </button>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </mat-card>
+    </div>
+
+    <div class="add-button">
+        <button mat-fab (click)="addItems(newItem)">
+            <mat-icon>add</mat-icon>
+        </button>
+    </div>
+</div>

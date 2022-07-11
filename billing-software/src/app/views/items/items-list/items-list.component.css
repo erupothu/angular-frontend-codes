@@ -1,0 +1,13 @@
+.add-button {
+  position: fixed;
+  right: 2vw;
+  bottom: 2vw;
+}
+.list-item {
+  text-align: center;
+  margin: 20px;
+}
+
+.list-item table{
+  width: 100%;
+}

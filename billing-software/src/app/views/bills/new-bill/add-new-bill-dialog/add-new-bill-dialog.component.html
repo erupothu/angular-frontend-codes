@@ -1,0 +1,39 @@
+<p>add-new-bill works!</p>
+<div>
+	<h2 mat-dialog-title>Add Items</h2>
+	<mat-dialog-content>
+		
+		<div style="display: inline">
+			<form class="example-form">
+				<mat-form-field class="example-full-width">
+					<input matInput placeholder="Search for a Items" [formControl]="control" [matAutocomplete]="auto">
+					<mat-autocomplete #auto="matAutocomplete">
+						<mat-option *ngFor="let item of itemsList" [value]="item.name"
+							(onSelectionChange)="onEnter(item)">
+							{{item.name}}
+						</mat-option>
+					</mat-autocomplete>
+
+				</mat-form-field>
+			</form>
+			<mat-form-field>
+				<input matInput placeholder="quantity" [(ngModel)]="quantity">
+			</mat-form-field>
+			<div>
+				<button mat-raised-button (click)="onSubmit()">add</button>
+			</div>
+		</div>
+		<!-- <div *ngIf="pickItemsFlag">
+			<mat-list role="list">
+				<mat-list-item *ngFor="let item of data.items">
+					<button mat-flat-button (click)="addItem(item)"> {{item.name}}</button>
+				</mat-list-item>
+			</mat-list>
+		</div> -->
+	</mat-dialog-content>
+	<mat-dialog-actions>
+		<button mat-raised-button (click)="pickItems()">pick Item</button>
+		<button mat-raised-button>scan Item</button>
+	</mat-dialog-actions>
+
+</div>

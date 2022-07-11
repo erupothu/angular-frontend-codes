@@ -1,0 +1,15 @@
+.add-item {
+    text-align: center;
+}
+.add-item div {
+    margin-bottom: 10px;
+}
+.add-item input {
+     margin-bottom: 10px;
+     padding: 5px;
+     width: 20vw;
+}
+
+.add-item table {
+   width: 100vw;
+}
