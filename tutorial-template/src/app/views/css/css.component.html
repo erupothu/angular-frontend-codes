@@ -1,0 +1,23 @@
+<div fxLayout="row wrap" fxLayoutAlign="center">
+	<div fxFlex="10">
+		<button>css Home</button>
+	</div>
+	<div fxFlex="70">
+		<h1 style="font-family: Loto;">CSS Tutorial</h1>
+		<div style="background-color: aliceblue;padding: 20px; font-family: Loto;">
+			<p> CSS is a language the describes the style of an HTML document.</p>
+			<p>CSS describes how HTML elements should be displayed</p>
+			<p>This tutorial will teach you CSS from basics to advanced</p>
+		</div>
+		<div>
+			<h3>Example in Each Chapter</h3>
+			<span>This tutorial contains hundreds of examples</span>
+		</div>
+		<div style="background-color: aliceblue;">
+			<pre><code highlight [textContent]="cssExample" (highlighted)="onHighlight($event)" [lineNumbers]="true" ></code></pre>
+		</div>
+		<button> try it Yourself</button>
+		<!-- <pre><code style="display:inline-block;height: 400px; white-space: pre-wrap;" spellcheck="false" highlight [textContent]="code2" contenteditable="true" [lineNumbers]="true" ></code></pre> -->
+	</div>
+
+</div>

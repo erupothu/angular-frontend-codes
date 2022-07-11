@@ -1,0 +1,54 @@
+<p>editor works!</p>
+
+<div fxLayout="row wrap" fxLayoutAlign="center">
+	<div fxFlex="40">
+		<div>
+			<mat-form-field appearance="outline">
+				<mat-label>Heading</mat-label>
+				<mat-select [value]="selectedHeading">
+					<mat-option *ngFor="let item of headings" [value]="item">
+						{{item}}
+					</mat-option>
+				</mat-select>
+			</mat-form-field>
+			<mat-form-field appearance="outline">
+				<mat-label>Fonts</mat-label>
+				<mat-select [value]="selectedFont">
+					<mat-option *ngFor="let item of fonts" [value]="item">
+						{{item}}
+					</mat-option>
+				</mat-select>
+			</mat-form-field>
+			<mat-form-field appearance="outline">
+				<mat-label>Alignment</mat-label>
+				<mat-select [value]="selectedAlignment">
+					<mat-option *ngFor="let item of allignments" [value]="item">
+						{{item}}
+					</mat-option>
+				</mat-select>
+			</mat-form-field>
+			<button mat-flat-button> button </button>
+			<button mat-flat-button>icon</button>
+			<button mat-flat-button>bold</button>
+			<button mat-flat-button>list</button>
+			<button mat-flat-button>para</button>
+			<button mat-flat-button [mat-menu-trigger-for]="color">color</button>
+			<button mat-flat-button [mat-menu-trigger-for]="color">color</button>
+			<mat-menu #color="matMenu">
+				<mat-card style="height: 200px;">
+					<mat-card-header>
+						<input matInput placeholder="# colorcode" [(ngModel)]="selectedColorCode">
+					</mat-card-header>
+					<mat-card-content>
+						<div *ngFor="let item of colors">
+							<button [ngStyle]="{'background-color':item}"> {{item}} </button>
+						</div>
+					</mat-card-content>
+				</mat-card>
+			</mat-menu>
+		</div>
+	</div>
+	<div fxFlex="40">
+
+	</div>
+</div>
