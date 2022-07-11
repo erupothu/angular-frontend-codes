@@ -1,0 +1,138 @@
+<div fxLayout="row wrap" fxLayoutAlign="center" fxLayout.xs="row wrap" fxLayoutGap="20px">
+	<div fxFlex="20%" fxFlex.xs="80%" fxFlexAlign="stretch">
+		<mat-card>
+			<img mat-card-image src="../../../assets/pngfiles/Electronic.png">
+			<mat-divider></mat-divider>
+			<mat-card-content>
+				<mat-card-header>
+					<h5>Electronics</h5>
+				</mat-card-header>
+			</mat-card-content>
+		</mat-card>
+	</div>
+
+	<div fxFlex="20%" fxFlex.xs="80%" fxFlexAlign="stretch">
+		<mat-card>
+			<img mat-card-image src="../../../assets/pngfiles/computer-peripharals.png">
+			<mat-divider></mat-divider>
+			<mat-card-content>
+				<mat-card-header>
+					<h5>Computer Peripherals</h5>
+				</mat-card-header>
+			</mat-card-content>
+		</mat-card>
+	</div>
+	<div fxFlex="20%" fxFlex.xs="80" fxFlexAlign="stretch">
+		<mat-card>
+			<img mat-card-image src="../../../assets/pngfiles/laptop-accessories.png">
+			<mat-divider></mat-divider>
+			<mat-card-content>
+				<mat-card-header>
+					<h5>Laptop Accessories</h5>
+				</mat-card-header>
+			</mat-card-content>
+		</mat-card>
+	</div>
+	<div fxFlex="20%" fxFlex.xs="80%" fxFlexAlign="stretch">
+		<mat-card>
+			<img mat-card-image src="../../../assets/pngfiles/mobile.png">
+			<mat-divider></mat-divider>
+			<mat-card-content>
+				<mat-card-header>
+					<h5>Mobiles</h5>
+				</mat-card-header>
+			</mat-card-content>
+		</mat-card>
+	</div>
+	<div fxFlex="20%" fxFlex.xs="80%" fxFlexAlign="stretch">
+		<mat-card>
+			<img mat-card-image src="../../../assets/pngfiles/mobile-accessories2.jpg">
+			<mat-divider></mat-divider>
+			<mat-card-content>
+				<mat-card-header>
+					<h5>Mobile Accessories</h5>
+				</mat-card-header>
+			</mat-card-content>
+		</mat-card>
+	</div>
+	<div fxFlex="20%" fxFlex.xs="80%" fxFlexAlign="stretch">
+		<mat-card>
+			<img mat-card-image src="../../../assets/pngfiles/men-fashion-logo.png">
+			<mat-divider></mat-divider>
+			<mat-card-content>
+				<mat-card-header>
+					<h5>Mens Wear</h5>
+				</mat-card-header>
+			</mat-card-content>
+		</mat-card>
+	</div>
+	<div fxFlex="20%" fxFlex.xs="80%" fxFlexAlign="stretch">
+		<mat-card>
+			<img mat-card-image src="../../../assets/pngfiles/women.png">
+			<mat-divider></mat-divider>
+			<mat-card-content>
+				<mat-card-header>
+					<h5>Women wear</h5>
+				</mat-card-header>
+			</mat-card-content>
+		</mat-card>
+	</div>
+	<div fxFlex="20%" fxFlex.xs="80%" fxFlexAlign="stretch">
+		<mat-card>
+			<img mat-card-image src="../../../assets/pngfiles/women.png">
+			<mat-divider></mat-divider>
+			<mat-card-content>
+				<mat-card-header>
+					<h5>Women wear</h5>
+				</mat-card-header>
+			</mat-card-content>
+		</mat-card>
+	</div>
+</div>
+
+<!-- https://www.npmjs.com/package/ng-image-slider -->
+<div fxLayout="row wrap" fxLayoutAlign="center">
+	<mat-card style="width: 80%">
+		<mat-card-header> Married Couples </mat-card-header>
+		<mat-card-content>
+
+			<ng-image-slider [images]="married_couples" [infinite]=true [autoSlide]=1></ng-image-slider>
+		</mat-card-content>
+	</mat-card>
+</div>
+
+<div fxLayout="row" fxLayoutAlign="center">
+	<mat-card style="width: 50%">
+		<mat-card-header> Married Couples carousel </mat-card-header>
+		<mat-card-content>
+			<div class="carousel">
+				<a class="carousel-item" href="#one!"><img src="../../assets/images/harish-mrg.jpg"></a>
+				<a class="carousel-item" href="#two!"><img src="../../assets/images/harish-thali.jpg"></a>
+				<a class="carousel-item" href="#three!"><img src="../../assets/images/harish1.jpg"></a>
+				<a class="carousel-item" href="#four!"><img src="../../assets/images/harish2.jpg"></a>
+				<a class="carousel-item" href="#five!"><img src="https://picsum.photos/200/400?image=1"></a>
+				<a class="carousel-item" href="#six!"><img src="https://picsum.photos/200/400?image=2"></a>
+				<a class="carousel-item" href="#seven!"><img src="../../assets/images/harish-thali.jpg"></a>
+				<a class="carousel-item" href="#eight!"><img src="../../assets/images/harish-mrg.jpg"></a>
+			</div>
+		</mat-card-content>
+	</mat-card>
+</div>
+
+<div fxLayout="row" fxLayoutAlign="center">
+	<mat-card style="width: 100%">
+		<mat-card-header> Married Couples sliding </mat-card-header>
+		<mat-card-content>
+			<div class="carousel carousel-slider center">
+				<a class="carousel-item" href="#one!"><img src="../../assets/images/harish-mrg.jpg"></a>
+				<a class="carousel-item" href="#two!"><img src="../../assets/images/harish-thali.jpg"></a>
+				<a class="carousel-item" href="#three!"><img src="../../assets/images/harish1.jpg"></a>
+				<a class="carousel-item" href="#four!"><img src="../../assets/images/harish2.jpg"></a>
+				<a class="carousel-item" href="#five!"><img src="https://picsum.photos/200/400?image=1"></a>
+				<a class="carousel-item" href="#six!"><img src="https://picsum.photos/200/400?image=2"></a>
+				<a class="carousel-item" href="#seven!"><img src="../../assets/images/harish-thali.jpg"></a>
+				<a class="carousel-item" href="#eight!"><img src="../../assets/images/harish-mrg.jpg"></a>
+			</div>
+		</mat-card-content>
+	</mat-card>
+</div>

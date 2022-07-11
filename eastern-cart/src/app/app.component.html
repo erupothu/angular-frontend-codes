@@ -1,0 +1,155 @@
+<div fxLayout="row wrap" fxLayout.xs="row wrap">
+	<mat-toolbar style="font-size: calc(12px + 0.35vh);">
+		<!-- <sticky> -->
+			<mat-toolbar-row style="background-color: bisque">
+				<button mat-flat-button (click)="sidenav.toggle()">
+					<mat-icon>menu</mat-icon>
+				</button>
+				<mat-form-field>
+					<input matInput placeholder="Search for products" [matAutocomplete]="auto"
+						(keyup)="filterData($event.target.value)">
+					<mat-autocomplete #auto="matAutocomplete">
+						<mat-option *ngFor="let item of searchedItems" [value]="item">
+							{{item}}
+						</mat-option>
+					</mat-autocomplete>
+					<!-- <mat-icon>search</mat-icon> -->
+				</mat-form-field>
+				<!-- <span>Eastern Cart</span> -->
+				<span style="flex: 1 1 auto"></span>
+				<!-- <span >+91 8464044323 <mat-icon>phone</mat-icon></span> -->
+				<span>
+					<mat-icon>cart</mat-icon> in cart
+				</span>
+			</mat-toolbar-row>
+		<!-- </sticky> -->
+			<mat-toolbar-row style="background-color: white; text-align: center">
+				<button mat-flat-button [matMenuTriggerFor]="electronics">Electronics<mat-icon>expand_more</mat-icon>
+					</button>
+				<mat-menu #electronics="matMenu" [hasBackdrop]="false">
+					<button mat-menu-item [matMenuTriggerFor]="mobiles"> mobiles </button>
+					<button mat-menu-item [matMenuTriggerFor]="mobileAccessories"> Mobile Accessories </button>
+					<button mat-menu-item [matMenuTriggerFor]="smartWatches"> Smart Watches </button>
+					<button mat-menu-item [matMenuTriggerFor]="laptops"> Laptops </button>
+					<button mat-menu-item [matMenuTriggerFor]="laptopAccessories"> Laptop Accessories </button>
+					<button mat-menu-item [matMenuTriggerFor]="televisions"> Televisions </button>
+					<button mat-menu-item [matMenuTriggerFor]="tvAccessories"> TV Accessories </button>
+					<button mat-menu-item [matMenuTriggerFor]="cameras"> Cameras</button>
+					<button mat-menu-item [matMenuTriggerFor]="cameraAccessories"> Camera Accessories </button>
+				</mat-menu>
+				<mat-menu #mobiles="matMenu">
+					<button mat-menu-item> Samsung </button>
+					<button mat-menu-item> Apple </button>
+					<button mat-menu-item> Mi </button>
+					<button mat-menu-item> Honor </button>
+					<button mat-menu-item> Oppo </button>
+					<button mat-menu-item> HTC </button>
+					<button mat-menu-item> Vivo </button>
+					<button mat-menu-item> Infinix </button>
+				</mat-menu>
+				<mat-menu #mobileAccessories="matMenu">
+					<button mat-menu-item> mobile cases </button>
+					<button mat-menu-item> head phones and headsets </button>
+					<button mat-menu-item> Powerbanks </button>
+					<button mat-menu-item> Screen guards </button>
+					<button mat-menu-item> memory cards </button>
+					<button mat-menu-item> mobile cables </button>
+					<button mat-menu-item> mobile cards </button>
+					<button mat-menu-item> chargess </button>
+				</mat-menu>
+				<mat-menu #smartWatches="matMenu">
+					<button mat-menu-item> smart watches </button>
+					<button mat-menu-item> smart bands </button>
+					<button mat-menu-item> smart glasses </button>
+				</mat-menu>
+				<mat-menu #laptops="matMenu">
+					<button mat-menu-item> Gaming laptops </button>
+					<button mat-menu-item> Desktops </button>
+					<button mat-menu-item> HP </button>
+					<button mat-menu-item> Lenovo </button>
+					<button mat-menu-item> Dell </button>
+					<button mat-menu-item> Accer </button>
+				</mat-menu>
+				<mat-menu #laptopAccessories="matMenu">
+					<button mat-menu-item> External Hard Disks </button>
+					<button mat-menu-item> pendrives </button>
+					<button mat-menu-item> laptop skin </button>
+					<button mat-menu-item> laptop bags </button>
+					<button mat-menu-item> Printers </button>
+					<button mat-menu-item> Monitors </button>
+					<button mat-menu-item> CPU </button>
+				</mat-menu>
+				<mat-menu #televisions="matMenu">
+					<button mat-menu-item> Samsung</button>
+					<button mat-menu-item> LG </button>
+					<button mat-menu-item> VU </button>
+					<button mat-menu-item> MI </button>
+				</mat-menu>
+				<mat-menu #tvAccessories="matMenu">
+					<button mat-menu-item> speakers</button>
+					<button mat-menu-item> Home theaters </button>
+					<button mat-menu-item> so9und bar </button>
+					<button mat-menu-item> Bluetooth speakers </button>
+					<button mat-menu-item> DTH setup box </button>
+				</mat-menu>
+				<mat-menu #cameras="matMenu">
+					<button mat-menu-item> Cannon</button>
+					<button mat-menu-item> DSLR </button>
+					<button mat-menu-item> sports and action </button>
+					<button mat-menu-item> canak </button>
+				</mat-menu>
+				<mat-menu #cameraAccessories="matMenu">
+					<button mat-menu-item> Lens</button>
+					<button mat-menu-item> Tripods </button>
+				</mat-menu>
+				<button mat-flat-button [matMenuTriggerFor]="mens">Mens<mat-icon>expand_more</mat-icon></button>
+				<mat-menu #mens="matMenu" [hasBackdrop]="false">
+					<button mat-menu-item> Foot wear</button>
+					<button mat-menu-item> top wear </button>
+					<button mat-menu-item> bottom wear </button>
+					<button mat-menu-item> season wear </button>
+					<button mat-menu-item> sports wear </button>
+					<button mat-menu-item> inner wear </button>
+				</mat-menu>
+				<button mat-flat-button [matMenuTriggerFor]="women">Womens <mat-icon>expand_more</mat-icon></button>
+				<mat-menu #women="matMenu" [hasBackdrop]="false">
+					<button mat-menu-item> Foot wear</button>
+					<button mat-menu-item> top wear </button>
+					<button mat-menu-item> bottom wear </button>
+					<button mat-menu-item> season wear </button>
+					<button mat-menu-item> sports wear </button>
+					<button mat-menu-item> inner wear </button>
+					<button mat-menu-item> western wear </button>
+					<button mat-menu-item> ethnic wear </button>
+				</mat-menu>
+				<button mat-flat-button [matMenuTriggerFor]="babykids">Baby <mat-icon>expand_more</mat-icon></button>
+				<mat-menu #babykids="matMenu" [hasBackdrop]="false">
+					<button mat-menu-item> Foot wear</button>
+					<button mat-menu-item> top wear </button>
+					<button mat-menu-item> bottom wear </button>
+					<button mat-menu-item> season wear </button>
+					<button mat-menu-item> sports wear </button>
+					<button mat-menu-item> inner wear </button>
+					<button mat-menu-item> western wear </button>
+					<button mat-menu-item> ethnic wear </button>
+				</mat-menu>
+				<button mat-flat-button>Home<mat-icon>expand_more</mat-icon></button>
+				<button mat-flat-button>sports <mat-icon>expand_more</mat-icon></button>
+			</mat-toolbar-row>
+	</mat-toolbar>
+	<!-- </div> -->
+	<mat-sidenav-container style="height:100vmin;">
+		<mat-sidenav #sidenav mode="side" style="width: 300px">
+			<mat-list>
+				<button mat-flat-button> Electronics </button>
+				<mat-divider></mat-divider>
+				<button mat-flat-button> Sports </button>
+				<mat-divider></mat-divider>
+				<button mat-flat-button> Clothing </button>
+			</mat-list>
+		</mat-sidenav>
+		<mat-sidenav-content>
+			<router-outlet></router-outlet>
+		</mat-sidenav-content>
+	</mat-sidenav-container>
+</div>
