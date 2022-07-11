@@ -1,0 +1,22 @@
+
+.highlightText {
+	color: green;
+}
+
+.text-family {
+	font-family: auto;
+	font-size: 150%;
+}
+
+.startButton {
+	margin-bottom: 5% !important;
+}
+
+.align-right {
+	display: block;
+	text-align: right;
+}
+
+.textCard {
+	margin-top: 10%;
+}

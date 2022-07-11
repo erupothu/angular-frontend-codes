@@ -1,0 +1,75 @@
+<mat-toolbar>
+	<mat-toolbar-row>
+		<span> Welcome to CMS </span>
+		<span style="flex: 1 1 auto;"></span>
+		<button mat-button [routerLink]="['/welcome/home']" routerLinkActive="router-link-active">
+			<mat-icon>home</mat-icon>
+		</button>
+		<button mat-button [routerLink]="['/welcome/login']" routerLinkActive="router-link-active"> Login </button>
+		<button mat-button [routerLink]="['/welcome/register']" routerLinkActive="router-link-active"> Register
+		</button>
+
+		<button mat-button [routerLink]="['/about-us']" routerLinkActive="router-link-active"> About us</button>
+	</mat-toolbar-row>
+</mat-toolbar>
+
+<div fxLayout="column" fxLayoutAlign="center" fxLayoutGap="0.5%">
+	<div>
+		<mat-card fxFlex="70%">
+			<mat-card-content>
+				<div *ngFor="let image of images; let i = index">
+					<div *ngIf="this.current === i">
+						<img mat-card-image class="image" [src]="image">
+						<div *ngIf="i === 1" class="image-text">
+							<div> This is a beautiful forest</div>
+							<div> This is Our Earth Environment</div>
+							<div> This Helps our Survival</div>
+						</div>
+						<div *ngIf="i === 2" class="image-text">
+							<div> This is a beautiful Himalays</div>
+							<div> This is Our Earth Environment</div>
+							<div> This Helps our Survival</div>
+						</div>
+						<div *ngIf="i === 3" class="image-text">
+							<div> This is a beautiful Deep</div>
+							<div> This is Our Earth beautiful animal</div>
+							<div> This Helps our Survival</div>
+						</div>
+						<div *ngIf="i === 4" class="image-text">
+							<div> This is a Our Earth planet</div>
+							<div> This is Our Earth Environment</div>
+							<div> This Helps our Survival</div>
+						</div>
+					</div>
+				</div>
+
+				<div fxLayout="row wrap" fxLayoutAlign="center" style="display: flex">
+					<div *ngFor="let article of  articles">
+						<div fxFlex="100%">
+							<mat-card>
+								<img mat-card-image [src]=article.image />
+								<div><strong>{{article.title}}</strong></div>
+								<div><b>{{article.author}}</b></div>
+								<div>{{article.description}}</div>
+							</mat-card>
+						</div>
+					</div>
+					<mat-card fxFlex="30%"
+						style="width: 30%; box-shadow: inset 0px 0 200px 24px blue; border-radius: 10px;">
+						Advertisement
+						<router-outlet></router-outlet>
+					</mat-card>
+
+				</div>
+			</mat-card-content>
+		</mat-card>
+	</div>
+</div>
+
+
+<!-- 
+<button mat-raised-button color="primary" (click)="readFileFromAssets()">Read file from assets</button>  <br>
+
+{{jsonData}}
+
+<button mat-raised-button color="primary" (click)="saveFiletoAssets()">Save file to assets</button>  <br> -->

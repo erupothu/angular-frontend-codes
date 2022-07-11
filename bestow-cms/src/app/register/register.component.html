@@ -1,0 +1,54 @@
+<p>register works!</p>
+
+
+<div fxLayout="row" fxLayout.xs="column" fxLayoutGap="0.5%" fxLayoutAlign="center strech">
+	<mat-card class="register-align" fxFlex="25%;" fxFlex.xs="80%">
+		<form [formGroup]="registerForm" (ngSubmit)="register()" fxFlex="25%;" fxFlex.xs="80%">
+			<div>
+				<mat-form-field appearance="fill">
+					<input matInput placeholder="name" formControlName="name" (blur)="vallidateName()">
+					<mat-icon *ngIf="validUser" matSuffix>check</mat-icon>
+					<mat-icon *ngIf="!validUser" matSuffix>close</mat-icon>
+				</mat-form-field>
+				<div *ngIf="!validUser">
+					User name not available
+				</div>
+			</div>
+			<div>
+				<mat-form-field appearance="fill">
+					<input matInput type="password" placeholder="password" formControlName="password">
+					<mat-icon matSuffix>lock</mat-icon>
+				</mat-form-field>
+				<div *ngIf="password.hasError('minlength')">
+					password min length is 6
+				</div>
+			</div>
+			<div>
+				<mat-form-field appearance="fill">
+					<input matInput type="password" placeholder="confirmPassword" formControlName="confirmPassword" (blur)="matchPassword()">
+					<mat-icon matSuffix>lock</mat-icon>
+				</mat-form-field>
+				<div *ngIf="!validPassword">
+					password not matched
+				</div>
+			</div>
+			<div>
+				<mat-form-field appearance="fill">
+					<input matInput placeholder="phoneNumber" formControlName="phoneNumber">
+					<mat-icon matSuffix>phone</mat-icon>
+				</mat-form-field>
+			</div>
+			<div>
+				<mat-form-field appearance="fill">
+					<input matInput type="email" placeholder="email" formControlName="email">
+					<mat-icon matSuffix>email</mat-icon>
+				</mat-form-field>
+			</div>
+			<div>
+			<button mat-raised-button (click)="register()" color="primary"> Submit </button>
+		</div>
+		</form>
+
+		
+	</mat-card>
+</div>

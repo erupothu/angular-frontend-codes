@@ -1,0 +1,26 @@
+.inputSpace {
+	margin-right: 10px;
+	width:40% !important;
+	font-family: auto;
+	font-size: 150%;
+}
+
+.testAreaSpace {
+	width:90% !important;
+	font-family: auto;
+	font-size: 150%;
+}
+
+.mat-input-wrapper{
+  width:400px !important;
+}
+	
+.welcome-card-configure {
+	background-color: darkgray;
+	margin-top: 20px;
+}
+
+.save-blog-button {
+	text-align: center;
+	margin-top: 3%;
+}

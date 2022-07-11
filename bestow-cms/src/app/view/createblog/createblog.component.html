@@ -1,0 +1,53 @@
+<div fxLayout="row" fxLayout.xs="row" fxLayoutAlign="center">
+	<div fxFlex="70%" fxFlex.xs="80%">
+		<mat-card>
+			<form [formGroup]="blogModel">
+				<mat-form-field class="inputSpace" appearance="outline">
+					<input matInput placeholder="Enter Blog Name" formControlName="blogName">
+				</mat-form-field>
+
+				<mat-form-field class="inputSpace" appearance="outline">
+					<input matInput placeholder="Enter blog Title" formControlName="blogTitle">
+				</mat-form-field>
+				<br>
+				<button mat-stroked-button color="primary" (click)="addLayout()"> Add Layout </button>
+
+				<mat-card *ngFor="let layout of getLayoutList(); let i=index" class="welcome-card-configure">
+					<div [formGroup]="layout">
+						<label>layout {{i}} </label><br>
+						<div>
+							<mat-form-field class="testAreaSpace" appearance="outline">
+								<input matInput placeholder="heading" formControlName="inputHeading">
+							</mat-form-field>
+						</div>
+						<div>
+							<mat-form-field class="testAreaSpace" appearance="outline">
+								<textarea matInput placeholder="Description here" formControlName="texAreaDescription"
+									matTextareaAutosize rows="5" cols="40"></textarea>
+							</mat-form-field>
+						</div>
+
+						<ckeditor [editor]="Editor" data="ckData" (change)="ckeditorData($event, i)"></ckeditor>
+
+						<div>
+							<img [src]="this.t.controls[i].value.descriptionImage" height="200">
+							<input type='file' (change)="onSelectFile($event, i)">
+						</div>
+
+						<button mat-stroked-button color="red" (click)="removeLayout(i)">Remove</button>
+					</div>
+				</mat-card>
+			</form>
+
+			<div class="save-blog-button">
+				<button mat-raised-button color="primary" (click)="saveBlog()"> Save blog </button>
+			</div>
+		</mat-card>
+
+
+
+		<!-- <div>
+	{{blogModel.value | json}}
+</div> -->
+	</div>
+</div>

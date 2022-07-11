@@ -1,0 +1,29 @@
+
+.image {
+	height: 400px;
+	width: 90%;
+	margin-left: 5%
+}
+
+.image-text {
+	position: absolute;
+	top: 40%;
+	left: 5%;
+	font-family: auto;
+	font: 150%;
+	color: white;
+}
+
+mat-toolbar {
+	background-color: darkgoldenrod;
+}
+
+button {
+	margin-left: 1%;
+}
+
+mat-card {
+	margin-top: 0.5%;
+	margin-left: 0.5%;
+	margin-right: 0.5%;
+}

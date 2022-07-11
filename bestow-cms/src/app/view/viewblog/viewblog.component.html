@@ -1,0 +1,27 @@
+<p>viewblog works!</p>
+
+<div fxLayout="row" fxLayout.xs="column" fxLayoutGap="0.5%" fxLayoutAlign="center">
+	<mat-card fxFlex="80%" fxFlex.xs="80%">
+		<mat-card-content>
+			<mat-card>
+				<mat-card-content>
+
+					<button mat-raised-button color="primary" (click)="startTypingTest();startImeInterval()" class="startButton"> Start Typing </button>
+					<button mat-raised-button color="primary" (click)="stopInterval()" class="startButton"> Stop Typing </button>
+					<div>
+						<span> {{seconds}} </span><span class="align-right"> {{ now | date:'dd-MM-yyyy HH:mm:ss'}} </span>
+					</div>
+					<div>Score: {{score}} (characters per min)</div>
+				</mat-card-content>
+			</mat-card>
+
+			<mat-card class="textCard">
+				<mat-card-content>
+					
+					<div [innerHTML]="innerHtmlText" class="text-family"></div>
+				</mat-card-content>
+			</mat-card>
+
+		</mat-card-content>
+	</mat-card>
+</div>
