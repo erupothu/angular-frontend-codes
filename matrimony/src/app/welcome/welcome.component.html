@@ -1,0 +1,342 @@
+<div fxFlex="100%" fxLayout="column" fxLayoutAlign="ce ter center">
+	<sticky>
+		<mat-toolbar fxFlex>
+			<mat-toolbar-row style="background-color: #f7eee5;">
+				<!-- <a [routerLink]="['/']" routerLinkActive="router-link-active" > <mat-icon svgIcon="facebook"> </mat-icon> </a> -->
+				<button mat-mini-fab color="primary">
+					<mat-icon gifIcon="facebook"></mat-icon>
+				</button>
+				<button mat-mini-fab style="background-color: #ffffff">
+					<mat-icon svgIcon="twitter"></mat-icon>
+				</button>
+				<button mat-mini-fab style="background-color: #ffffff">
+					<mat-icon svgIcon="youtube"></mat-icon>
+				</button>
+				<button mat-mini-fab style="background-color: #ffffff">
+					<mat-icon svgIcon="whatsapp"></mat-icon>
+				</button>
+				<button mat-mini-fab style="background-color: #ffffff">
+					<mat-icon svgIcon="linkedin"></mat-icon>
+				</button>
+				<span style="flex: 1 1 auto"></span>
+
+				<button>
+					<mat-icon>home</mat-icon>
+				</button>
+				<a [routerLink]="['/']" routerLinkActive="router-link-active" style="color:black">About us</a>
+			</mat-toolbar-row>
+		</mat-toolbar>
+	</sticky>
+	<div style="position: absolute;right: 0%;top: 10%;">
+		<mat-tab-group>
+			<mat-tab label="Login">
+				<mat-card>
+					<mat-card-content>
+						<div style="border: 1px solid blue;font-size: 18px;margin: 4px;">
+							<input matInput placeholder="username">
+						</div>
+						<div style="border: 1px solid blue;font-size: 18px;margin: 4px">
+							<input matInput placeholder="password">
+						</div>
+					</mat-card-content>
+					<mat-card-actions style="text-align: center;">
+						<button mat-raised-button> Login </button>
+					</mat-card-actions>
+				</mat-card>
+			</mat-tab>
+			<mat-tab label="Register">
+				<mat-card>
+					<mat-card-content>
+						<div style="border: 1px solid blue;font-size: 17px;margin: 4px;">
+							<input matInput placeholder="username">
+						</div>
+						<div style="border: 1px solid blue;font-size: 17px;margin: 4px">
+							<input matInput type="password" placeholder="password">
+						</div>
+						<div style="border: 1px solid blue;font-size: 17px;margin: 4px">
+							<input matInput type="number" placeholder="phone number">
+						</div>
+						<div style="border: 1px solid blue;font-size: 17px;margin: 4px">
+							<input matInput type="email" placeholder="email">
+						</div>
+						<div style="border: 1px solid blue;font-size: 17px;margin: 4px">
+							<table>
+								<tr>
+									<td>
+										<mat-card>
+											<mat-card-content>
+												<table>
+													<tr>
+														<td>
+															looking for
+														</td>
+														<td>
+															<mat-radio-group>
+																<mat-radio-button value="1">bride</mat-radio-button>
+																<mat-radio-button value="2">groom</mat-radio-button>
+															</mat-radio-group>
+														</td>
+													</tr>
+													<tr>
+														<td>Age: </td>
+														<td>
+															<mat-form-field>
+																<mat-label>select age</mat-label>
+																<mat-select>
+																	<mat-option *ngFor="let number of age"
+																		[value]="number"> {{number}}
+																	</mat-option>
+																</mat-select>
+															</mat-form-field>
+														</td>
+													</tr>
+													<tr>
+														<td>Cast: </td>
+														<td>
+															<mat-form-field>
+																<mat-label>select cast</mat-label>
+																<mat-select>
+																	<mat-option
+																		*ngFor="let number of ['sc', 'st', 'bc', 'oc']"
+																		[value]="number"> {{number}} </mat-option>
+																</mat-select>
+															</mat-form-field>
+														</td>
+													</tr>
+													<tr>
+														<td>Mother tongue</td>
+														<td>
+															<mat-form-field>
+																<mat-label>select Language</mat-label>
+																<mat-select>
+																	<mat-option
+																		*ngFor="let number of ['telugu', 'hindi', 'english', 'kannada', 'tamil']"
+																		[value]="number"> {{number}} </mat-option>
+																</mat-select>
+															</mat-form-field>
+														</td>
+													</tr>
+													<tr>
+														<td>Maritial status</td>
+														<td>
+															<mat-form-field>
+																<mat-label>select</mat-label>
+																<mat-select>
+																	<mat-option
+																		*ngFor="let number of ['single', 'divorsed', 'widow', '2nd marriage']"
+																		[value]="number"> {{number}} </mat-option>
+																</mat-select>
+															</mat-form-field>
+														</td>
+													</tr>
+													<tr>
+														<td>Country</td>
+														<td>
+															<mat-form-field>
+																<mat-label>select Country</mat-label>
+																<mat-select>
+																	<mat-option
+																		*ngFor="let number of ['India', 'Srilanka', 'Nepal', 'china']"
+																		[value]="number"> {{number}} </mat-option>
+																</mat-select>
+															</mat-form-field>
+														</td>
+													</tr>
+													<tr>
+														<td>
+															<button mat-button>Register</button>
+														</td>
+													</tr>
+												</table>
+											</mat-card-content>
+										</mat-card>
+									</td>
+								</tr>
+							</table>
+						</div>
+					</mat-card-content>
+					<mat-card-actions style="text-align: center;">
+						<button mat-raised-button> Submit </button>
+					</mat-card-actions>
+				</mat-card>
+			</mat-tab>
+		</mat-tab-group>
+
+	</div>
+
+	<div fxLayoutAlign="center">
+		<div style="width: 60%">
+			<div class="image-container">
+				<img src="../../assets/images/harish-mrg.jpg" height="300" width="100%" style="opacity: 0.6">
+				<div class="text-onImage">
+					<mat-form-field>
+						<input matInput placeholder="search" />
+					</mat-form-field>
+					<mat-icon>search</mat-icon>
+				</div>
+				<div class="text-block">
+					<h4>Nature</h4>
+					<p>What a beautiful sunrise</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div fxLayout="row wrap" fxLayoutAlign="center">
+		<div fxFlex="30" style="border: 1px solid blue;font-size: 17px;margin: 4px">
+			<div>
+				<mat-card>
+					<mat-card-content>
+						<table>
+							<tr>
+								<td>
+									looking for
+								</td>
+								<td>
+									<mat-radio-group>
+										<mat-radio-button value="1">bride</mat-radio-button>
+										<mat-radio-button value="2">groom</mat-radio-button>
+									</mat-radio-group>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<mat-form-field>
+										<mat-label>select from age</mat-label>
+										<mat-select>
+											<mat-option *ngFor="let number of age" [value]="number"> {{number}}
+											</mat-option>
+										</mat-select>
+									</mat-form-field>
+								</td>
+								<td>
+									<mat-form-field>
+										<mat-label>select to age</mat-label>
+										<mat-select>
+											<mat-option *ngFor="let number of age" [value]="number"> {{number}}
+											</mat-option>
+										</mat-select>
+									</mat-form-field>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<mat-form-field>
+										<mat-label>select cast</mat-label>
+										<mat-select>
+											<mat-option *ngFor="let number of ['sc', 'st', 'bc', 'oc']"
+												[value]="number"> {{number}} </mat-option>
+										</mat-select>
+									</mat-form-field>
+								</td>
+								<td>
+									<mat-form-field>
+										<mat-label>select Language</mat-label>
+										<mat-select>
+											<mat-option
+												*ngFor="let number of ['telugu', 'hindi', 'english', 'kannada', 'tamil']"
+												[value]="number"> {{number}} </mat-option>
+										</mat-select>
+									</mat-form-field>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<mat-form-field>
+										<mat-label>select Marital status</mat-label>
+										<mat-select>
+											<mat-option
+												*ngFor="let number of ['single', 'divorsed', 'widow', '2nd marriage']"
+												[value]="number"> {{number}} </mat-option>
+										</mat-select>
+									</mat-form-field>
+								</td>
+								<td>
+									<mat-form-field>
+										<mat-label>select Country</mat-label>
+										<mat-select>
+											<mat-option *ngFor="let number of ['India', 'Srilanka', 'Nepal', 'china']"
+												[value]="number"> {{number}} </mat-option>
+										</mat-select>
+									</mat-form-field>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<button mat-button>Search</button>
+								</td>
+							</tr>
+						</table>
+					</mat-card-content>
+				</mat-card>
+			</div>
+		</div>
+		<div fxFlex="30" >
+			<table>
+				<tr>
+					<td>
+						<video width="500" height="280" controls>
+							<source src="../../assets/videos/pre-wedding.mp4" type="video/mp4">
+						</video>
+					</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+
+	<div fxLayout="row wrap" fxLayoutAlign="center">
+		<mat-card style="width: 60%">
+			<mat-card-header> Married Couples </mat-card-header>
+			<mat-card-content>
+				<!-- https://www.npmjs.com/package/ng-image-slider -->
+				<ng-image-slider [images]="married_couples" [infinite]=true [autoSlide]=1></ng-image-slider>
+			</mat-card-content>
+		</mat-card>
+	</div>
+
+	<div fxLayout="row wrap" fxLayoutAlign="center">
+		<mat-card style="width: 70%">
+			<mat-card-header> Groom </mat-card-header>
+			<mat-card-content>
+				<!-- https://www.npmjs.com/package/ng-image-slider -->
+				<ng-image-slider [images]="groom_single" [infinite]=true [autoSlide]=1></ng-image-slider>
+			</mat-card-content>
+		</mat-card>
+	</div>
+
+	<div fxLayout="row wrap" fxLayoutAlign="center">
+		<mat-card style="width: 70%">
+			<mat-card-header> Bride </mat-card-header>
+			<mat-card-content>
+				<!-- https://www.npmjs.com/package/ng-image-slider -->
+				<ng-image-slider [images]="bride_single" [infinite]=true [autoSlide]=1></ng-image-slider>
+			</mat-card-content>
+		</mat-card>
+	</div>
+	<div fxLayout="row wrap" fxLayoutAlign="center">
+		<iframe width="420" height="345" src="https://www.youtube.com/embed/tgbNymZ7vqY"></iframe>
+	</div>
+
+	<div fxLayout="row wrap" fxLayoutAlign="center" style="background-color: brown">
+		<ul>
+			<h2>ABOUT</h2>
+			<li *ngFor="let item of ['about us', 'Membership plan', 'e-paper']"> <a>{{item}}</a></li>
+		</ul>
+		<ul>
+			<h2>SEARCH PROFILE</h2>
+			<li *ngFor="let item of ['urgent proposal', 'simple search', 'advance search']"> <a>{{item}}</a></li>
+		</ul>
+		<ul>
+			<h2>INFORMATION</h2>
+			<li *ngFor="let item of ['Terms & conditions', 'Privacy Policy', 'Contact us']"> <a>{{item}}</a></li>
+		</ul>
+
+		<ul>
+			<h2>CUSTOMER CARE</h2>
+			<li *ngFor="let item of ['8464044323', 'info@gmail.com', 'support@gmail.com']"> <a>{{item}}</a></li>
+		</ul>
+	</div>
+	<div fxLayout="row wrap" fxLayoutAlign="center" style="background-color: blueviolet">
+		2020 all rights reserved
+	</div>
+</div>
