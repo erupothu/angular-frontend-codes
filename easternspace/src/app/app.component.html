@@ -1,0 +1,42 @@
+<div fxLayout="row wrap" fxLayoutAlign="center" fxLayoutGap="1%">
+    <div fxFlex="70%">
+        <div style="display: inline;">
+            <img src="../assets/icons/easternsapce4.svg" height="100px" width="200px">
+        </div>
+        <div style="display: inline;margin-left: 150px;">
+            <a routerLink="/home"> Home </a>
+        </div>
+        <div style="display: inline;margin-left: 50px;">
+            <a routerLink="/about"> About Us </a>
+        </div>
+        <div style="display: inline;margin-left: 50px;">
+            <button mat-button [matMenuTriggerFor]="menu"  xPosition="after">Services</button>
+            <mat-menu #menu="matMenu">
+                <a mat-menu-item href="http://blog.easternspace.in" target="blank">Blog</a>
+                <a mat-menu-item href="http://dashboard.easternspace.in" target="blank"> Profile</a>
+                <a mat-menu-item href="http://matrimony.easternspace.in" target="blank">Matrimony</a>
+                <a mat-menu-item  href="http://billing.easternspace.in" target="blank">Billing Software</a>
+                <button mat-menu-item>School Management</button>
+                <button mat-menu-item>HR Management</button>
+                <button mat-menu-item>ERP</button>
+                <button mat-menu-item>Ticketing</button>
+            </mat-menu>
+        </div>
+        <div style="display: inline;margin-left: 50px;">
+            <a routerLink="/contact"> Contacts </a>
+        </div>
+        <div style="display: inline;margin-left: 50px;">
+
+        </div>
+        <div style="display: inline;margin-left: 50px;">
+            <a routerLink="/about"> Carrier </a>
+        </div>
+    </div>
+    <div fxFlex="100%">
+        <hr>
+    </div>
+    <div fxFlex="70%">
+        <router-outlet></router-outlet>
+    </div>
+
+</div>

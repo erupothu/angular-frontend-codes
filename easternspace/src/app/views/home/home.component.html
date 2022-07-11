@@ -1,0 +1,99 @@
+<!-- custom Scrolling text -->
+<div>
+    <ng-marquee duration="10s" bgcolor="#00224f" direction="left" scrolldelay="600" behavior="loop"
+        [stopOnHover]="true">
+        <mark>
+            <div
+                style="font-family: Rajdhani, sans-serif; color: green; background-color: blanchedalmond; font-size: 20px">
+                <a href="http://www.easternsapce.in/" target="__blank"> Easternspace </a> added two domains
+                <a href="http://blog.easternspace.in/" target="__blank">Blog</a> and
+                <a href="http://dashboard.easternspace.in/" target="__blank">Profile</a>
+            </div>
+        </mark>
+    </ng-marquee>
+</div>
+
+<!-- slide view images https://www.npmjs.com/package/ngx-teximate -->
+
+<div >
+    <div class="sliders">
+        <ng-container *ngFor="let img of bussiness_images; let i = index">
+            <div class="slider" *ngIf="current == i" @fade>
+                <img [src]="img.name" style="height: 40vh; width: 100%;">
+                <teximate class="animate" #teximate [text]="img.title" [enter]="enterAnimation"></teximate>
+            </div>
+        </ng-container>
+    </div>
+</div>
+<br>
+<div style="margin-top: 40%;">
+    <div class="box-header">
+        <span> About Eastern Space</span>
+    </div>
+    <br>
+    <div class="about-info">
+        <p>
+            Eastern space was established in 2020 january 1, The main aim of Easter space is to build better websites and provide better service to the
+            customers. We accept freelance webistes also, Our motive is to build better websites with new updated technologies.
+            <br><br>
+            We develop Profile templates, blog templates with customised editor, matrimony template, admin pages, chatbot and billing software, we are using frontend
+            technologies like HTML, CSS, bootstrap, AngularJS, ReactJS, Angular 10, Backend technologies we are good at spring boot microservices, microservice architecture designing,
+            devops like AWS, Jenkins, Docker and kubernates along with Databases MySql and Postgres. Other integration like ML face recognition, Email alert service, ETL Service,
+            Google maps integration, Sftp integration from backend and much more...
+        </p>
+    </div>
+</div>
+
+<div style="margin-top: 10%;">
+    <div class="box-header">
+        <span> Technologies </span>
+    </div>
+    <br>
+    <div class="about-info">
+        <p>
+            <img src="../../../assets/jpeg/angular9.jpeg" height="200" width="200" style="margin: 1%;">
+        <img src="../../../assets/jpeg/angularjs.png" height="200" width="200" style="margin: 1%;">
+        <img src="../../../assets/png/html.png" height="200" width="200" style="margin: 1%;">
+        <img src="../../../assets/png/css.png" height="200" width="200" style="margin: 1%;">
+        <img src="../../../assets/png/java.png" height="200" width="200" style="margin: 1%;">
+        <img src="../../../assets/png/react.png" height="200" width="200" style="margin: 1%;">
+        <img src="../../../assets/png/typescript.png" height="200" width="200" style="margin: 1%;">
+        <img src="../../../assets/png/vue.png" height="200" width="200" style="margin: 1%;">
+        <img src="../../../assets/png/aws.png" height="200" width="200" style="margin: 1%;">
+        <img src="../../../assets/png/springboot.png" height="200" width="200" style="margin: 1%;">
+        </p>
+    </div>
+    <br>
+</div>
+
+<div style="margin-top: 10%;">
+    <div class="box-header">
+        <span> Testimonial</span>
+    </div>
+    <br>
+    <div class="about-info">
+        <p>
+            
+        </p>
+    </div>
+    <br>
+</div>
+
+<div class="footer">
+    <table>
+        <tr>
+            <td>Follow us on</td>
+            <td>Youtube</td>
+            <td>Linkedin</td>
+            <td>Facebook</td>
+            <td>Twitter</td>
+        </tr>
+    </table>
+</div>
+<!-- <div>
+    <div class="container">
+        <img src="https://sanjayv.github.io/ng-image-slider/contents/assets/img/slider/5.jpg" height="500px"
+            width="100%">
+        <span class="an-1">I am looking great.</span>
+    </div>
+</div> -->
