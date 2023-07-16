@@ -1,0 +1,87 @@
+<mat-toolbar>
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <span> Purohith </span>
+
+    <div fxLayout="row" fxLayoutGap="2%" fxLayoutAlign="right" style="margin-left: 20%;">
+        <button mat-button > Home </button>
+        <button mat-button > About Us </button>
+        <button mat-button > Contact Us </button>
+        <button mat-button [matMenuTriggerFor]="pooja">Pooja</button>
+        <mat-menu #pooja="matMenu">
+            <button mat-menu-item>durga pooja</button>
+            <button mat-menu-item>satyanarayana pooja</button>
+            <button mat-menu-item>bhoomi pooja</button>
+            <button mat-menu-item>mahalakshmi</button>
+            <button mat-menu-item>vehicle</button>
+            <button mat-menu-item>rudhrabishekam</button>
+            <button mat-menu-item>saraswathi</button>
+            <button mat-menu-item>surya</button>
+            <button mat-menu-item [matMenuTriggerFor]="otherPooja">others</button>
+        </mat-menu>
+        <mat-menu #otherPooja="matMenu">
+          <button mat-menu-item [matMenuTriggerFor]="danam">Danam</button>
+          <button mat-menu-item [matMenuTriggerFor]="ansisters">ansisters pooja</button>
+          <button mat-menu-item >shanthi pooja</button>
+          <button mat-menu-item [matMenuTriggerFor]="festival">festival pooja</button>
+        </mat-menu>
+        <mat-menu #danam="matMenu">
+          <button mat-menu-item>gomatha danam</button>
+          <button mat-menu-item>brahmana bojanam</button>
+          <button mat-menu-item>poor donation</button>
+        </mat-menu>
+        <mat-menu #ansisters="matMenu">
+          <button mat-menu-item>anthima sanskaram</button>
+          <button mat-menu-item>pindam</button>
+        </mat-menu>
+        <mat-menu #festival="matMenu">
+          <button mat-menu-item>sankranthi</button>
+          <button mat-menu-item>srinam navami</button>
+          <button mat-menu-item>vijayaka chavithi</button>
+          <button mat-menu-item>dashara</button>
+          <button mat-menu-item>dipavali</button>
+        </mat-menu>
+      
+        <button mat-button [matMenuTriggerFor]="homam">Homam</button>
+        <mat-menu #homam="matMenu">
+            <button mat-menu-item>chandi</button>
+            <button mat-menu-item>vinayaka</button>
+            <button mat-menu-item>mruthunjaya</button>
+            <button mat-menu-item>navagraha</button>
+            <button mat-menu-item>rudhra</button>
+            <button mat-menu-item>sudharshana</button>
+            <button mat-menu-item>vasthu</button>
+
+        </mat-menu>
+        <button mat-button [matMenuTriggerFor]="ceremony">Ceremony</button>
+        <mat-menu #ceremony="matMenu">
+            <button mat-menu-item>engagement</button>
+            <button mat-menu-item>marriage</button>
+            <button mat-menu-item>shanthi</button>
+            <button mat-menu-item>aksharabhyasam</button>
+            <button mat-menu-item>annaprasanam</button>
+            <button mat-menu-item>upanayanam</button>
+            <button mat-menu-item>house opening</button>
+            <button mat-menu-item>haldi</button>
+            <button mat-menu-item>bithday</button>
+            <button mat-menu-item>naming</button>
+            <button mat-menu-item>lalitha sahasthranamam</button>
+            <button mat-menu-item>office</button>
+        </mat-menu>
+        <button mat-button [matMenuTriggerFor]="otherService">other services</button>
+        <mat-menu #otherService="matMenu">
+          <button mat-menu-item>astrology</button>
+          <button mat-menu-item>horoscope</button>
+          <button mat-menu-item>jyothishyam</button>
+          <button mat-menu-item>vasthu</button>
+      </mat-menu>
+    </div>
+    <span class="toolbar-spacer"></span>
+    <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+      <mat-icon>favorite</mat-icon>
+    </button>
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+      <mat-icon>share</mat-icon>
+    </button>
+  </mat-toolbar>

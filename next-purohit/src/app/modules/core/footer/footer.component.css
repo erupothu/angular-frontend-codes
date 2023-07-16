@@ -1,0 +1,12 @@
+.footer-sticky {
+    position:fixed;
+    bottom:0px;
+    background-color:rgb(121, 116, 117);
+    width:100%;
+    padding: 2%;
+    color: rgb(144, 15, 49);
+    font-weight: bold;
+}
+div button {
+    color: blue;
+}
