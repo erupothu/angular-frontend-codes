@@ -29,31 +29,87 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
 
 Modules:  
-ng g m modules\module-name --routing=true
-ng g c modules\module\component-name --module=modules\module-name
+ng g m modules\module-name --routing=true  
+ng g c modules\module\component-name --module=modules\module-name  
 
 services:  
-ng g s .\views\services\user
+ng g s .\views\services\user  
 
 models:  
-ng g class .\views\models\user-details --type=model
-ng g interface .\views\models\iuser-details --type=model
+ng g class .\views\models\user-details --type=model  
+ng g interface .\views\models\iuser-details --type=model  
 
 directives:  
-ng g d modules\shared\highlight
+ng g d modules\shared\highlight  
 
 
-UI packages:
-npm install --save @angular/material @angular/cdk @angular/animations hammerjs @angular/flex-layout
+UI packages:  
+npm install --save @angular/material @angular/cdk @angular/animations hammerjs @angular/flex-layout  
 
-app.module.js:
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+app.module.js:  
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';  
 
-styles.css
-@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+styles.css  
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";  
 
-main.ts
-import 'hammerjs';
+main.ts  
+import 'hammerjs';  
 
-index.html
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+index.html  
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">  
+
+### Pages:  
+__Pooja__  
+durga pooja  
+satyanarayana pooja  
+bhoomi pooja  
+mahalakshmi  
+vehicle  
+rudhrabishekam  
+saraswathi  
+surya   
+
+__Danam__  
+gomatha danam  
+brahmana bojanam  
+poor donation  
+
+__ansisters__  
+anthima sanskaram  
+pindam  
+
+__festivals__  
+sankranthi  
+srinam navami  
+vijayaka chavithi  
+dashara  
+dipavali  
+
+__Homam__  
+chandi  
+vinayaka  
+mruthunjaya  
+navagraha  
+rudhra  
+sudharshana  
+vasthu  
+
+__Ceremony__  
+engagement  
+marriage  
+shanthi  
+aksharabhyasam  
+annaprasanam  
+upanayanam  
+house opening  
+haldi  
+bithday  
+naming  
+lalitha sahasthranamam  
+office  
+
+__other services__  
+astrology  
+horoscope  
+jyothishyam  
+vasthu  
