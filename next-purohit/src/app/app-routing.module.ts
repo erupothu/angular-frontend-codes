@@ -11,10 +11,10 @@ const routes: Routes = [
   { path: 'contact-us', component: ContactUsComponent },
   { path: 'dashboard', component: DashboardComponent },
   { path: 'home', component: HomeComponent},
-  { path: "homa", loadChildren: () => import('./modules/homa/homa.module').then(m => m.HomaModule) },
-  { path: 'pooja', loadChildren: () => import('./modules/pooja/pooja.module').then(m => m.PoojaModule) },
-  { path: 'ceremony', loadChildren: () => import('./modules/ceremony/ceremony.module').then(m => m.CeremonyModule) },
-  { path: 'other-services', loadChildren: () => import('./modules/other-services/other-services.module').then(m => m.OtherServicesModule) },
+  { path: "homa", loadChildren: () => import('./homa/homa.module').then(m => m.HomaModule) },
+  { path: 'pooja', loadChildren: () => import('./pooja/pooja.module').then(m => m.PoojaModule) },
+  { path: 'ceremony', loadChildren: () => import('./ceremony/ceremony.module').then(m => m.CeremonyModule) },
+  { path: 'other-services', loadChildren: () => import('./other-services/other-services.module').then(m => m.OtherServicesModule) },
   { path: '**', redirectTo: 'home'}
 ];
 

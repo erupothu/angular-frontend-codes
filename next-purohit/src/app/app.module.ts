@@ -9,9 +9,9 @@ import { AboutComponent } from './views/about/about.component';
 import { PageNotFoundComponent } from './views/page-not-found/page-not-found.component';
 import { AccessDeniedComponent } from './views/access-denied/access-denied.component';
 import { ContactUsComponent } from './views/contact/contact-us.component';
-import { SharedModule } from './modules/shared/shared.module';
-import { CoreModule } from './modules/core/core.module';
 import { MaterialModule } from './material.module';
+import { CoreModule } from './core/core.module';
+import { SharedModule } from './shared/shared.module';
 
 @NgModule({
   declarations: [
